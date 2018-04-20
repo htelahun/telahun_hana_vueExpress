@@ -1,0 +1,26 @@
+<section id="app" class="movie-genres">
+  <div class="movie-wrapper">
+    <aside>
+      <h4 class="movie-title">{{defaultMovie.movie_title}}</h4>
+
+      <i class="movie-genre">{{defaultMovie.genre_name}}</i>
+    </aside>
+    <video autoplay >
+      <source src="movies/{{defaultMovie.movie_video}}" type="video/mp4">
+      
+    </video>
+  </div>
+
+  <section class="genre-lists" v-for="genre in genres">
+    <div v-if="genre.movies.length > 0">
+      <div class="genre-item">
+        <h6 class="genre-name">${genre.name}</h6>
+        <div class="movie-list" v-for="movie in genre.movies">
+          <a :href="'/movies/' + movie.movie_id + '/' + movie.movie_video">
+          <img class="movie-thumb" :src="'../images/'+ movie.movie_thumb" :alt="movie.movie_title" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
