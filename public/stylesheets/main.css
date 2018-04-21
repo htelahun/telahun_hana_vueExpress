@@ -1,0 +1,13 @@
+.nav{
+  background-color: #252525;
+}
+
+.movie-wrapper {   background-image: url("../images/rendel.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: black;
+  height: 500px;
+margin-top: 50px;
+padding-top: 100px ;
+padding-left:50px;
+color: white;}

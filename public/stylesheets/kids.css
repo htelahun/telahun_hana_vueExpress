@@ -1,0 +1,13 @@
+.nav{
+  background-color: red;
+}
+
+  .movie-wrapper {   background-image:url("../images/bossbaby.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: white;
+    height: 500px;
+  margin-top: 50px;
+  padding-top: 100px ;
+  padding-left:50px;
+}

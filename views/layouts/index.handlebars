@@ -3,28 +3,28 @@
 <head>
 	<meta charset="UTF-8">
 	<title>{{ title }}</title>
-	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+
+	<link rel="stylesheet" href="/stylesheets/style.css" media="screen" title="no title" charset="utf-8">
+	{{#if kidspage}}
+    <link rel="stylesheet" href="/stylesheets/kids.css" media="screen" title="no title" charset="utf-8">
+    {{/if}}
+		{{#if index}}
+	    <link rel="stylesheet" href="/stylesheets/main.css" media="screen" title="no title" charset="utf-8">
+	    {{/if}}
 	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.15/dist/vue.js"></script>
 </head>
 <body>
-	<header>
-		<h1>ROKU</h1>
-		<nav>
-			<ul>
-				<li>Kids</li>
-				<li><i class="fas fa-user-circle"></i></li>
-				<li><i class="fas fa-cog"></i></li>
-			</ul>
-		</nav>
-	</header>
 
 	<main>
 		{{{ body }}}
 	</main>
 
-	<footer>
+{{#if mainpage}}
+	<footer class="footer">
 		<ul>
+			<li class="roku-foot"> Roku</li>
+
 			<li>
 				<i class="fab fa-facebook"></i>
 			</li>
@@ -39,6 +39,7 @@
 			</li>
 		</ul>
 	</footer>
+{{/if}}
 
   <script >
     var appData ={
@@ -54,5 +55,11 @@
 	<script src="/javascripts/videopage.js"></script>
 {{/if}}
 
-</body>
+{{#if kidspage}}
+	<script src="/javascripts/kids.js"></script>
+{{/if}}
+
+{{#if kidsplayer}}
+	<script src="/javascripts/kids-vidpage.js"></script>
+{{/if}}</body>
 </html>
