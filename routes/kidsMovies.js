@@ -27,7 +27,7 @@ router.get('/', (req, res, next) => {
   router.get('/kids-movies/:id/:vidsrc', (req,res)=> {
 // get the movie details from the server
 console.log(req.params.id, req.params.vidsrc);
-connect.query(`SELECT * FROM tbl_comments WHERE comments_movie = "${req.params.id}"`, (err,rows)=>{
+connect.query(`SELECT * FROM tbl_kidsComments WHERE comments_movie = "${req.params.id}"`, (err,rows)=>{
   if(err){
     console.log(err);
   }else {
@@ -39,6 +39,7 @@ connect.query(`SELECT * FROM tbl_comments WHERE comments_movie = "${req.params.i
       videopage: false,
       kidsplayer: true,
       kidspage: false
+
         });
       }
     })

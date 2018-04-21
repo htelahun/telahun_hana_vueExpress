@@ -23,7 +23,7 @@ var videoApp={
         //stub
         let movieId = document.querySelector('.movId').textContent;
 
-        fetch('/api', {
+        fetch('/api-kids', {
           method: 'post',
           headers: {
             'Accept' : 'application/json, text-plain, */*',
@@ -50,3 +50,21 @@ var videoApp={
 };
 
 videoApp.addComments(appData.movies);
+var comment = document.querySelector(".comment-message");
+var show = document.querySelector(".popup");
+var x = document.querySelector(".x");
+var video = document.querySelector(".player");
+var body = document.body;
+
+function popup() {
+  //console.log('got its');
+  show.style.visibility = "visible";
+  video.pause();
+
+}
+function close() {
+  show.style.visibility = "hidden";
+}
+
+x.addEventListener('click', close, false);
+comment.addEventListener('click', popup, false);

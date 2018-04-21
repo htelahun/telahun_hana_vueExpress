@@ -28,7 +28,7 @@
       <div class="genre-item">
         <h6 class="genre-name">${genre.name}</h6>
         <div class="movie-list" v-for="movie in genre.movies">
-          <a :href="'/kids-movies/' + movie.kids_id + '/' + movie.kids_video">
+          <a :href="'kidsMovies/kids-movies/' + movie.kids_id + '/' + movie.kids_video">
           <img class="movie-thumb" :src="'../images/'+ movie.kids_thumb" :alt="movie.kids_title" />
           </a>
         </div>
