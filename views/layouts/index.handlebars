@@ -13,6 +13,9 @@
 	    {{/if}}
 	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.15/dist/vue.js"></script>
+	<script type="text/javascript" src="/javascripts/vue-social-sharing.js">
+
+	</script>
 </head>
 <body>
 
@@ -21,28 +24,6 @@
 	</main>
 
 {{#if mainpage}}
-	<footer class="footer">
-		<ul>
-			<li class="roku-foot"> Roku</li>
-
-			<li>
-				<i class="fab fa-facebook"></i>
-			</li>
-			<li>
-				<i class="fab fa-twitter-square"></i>
-			</li>
-			<li>
-				<i class="fab fa-google-plus-square"></i>
-			</li>
-			<li>
-				<i class="fab fa-instagram"></i>
-			</li>
-		</ul>
-	</footer>
-{{/if}}
-
-
-{{#if kidspage}}
 	<footer class="footer">
 		<ul>
 			<li class="roku-foot"> Roku</li>
@@ -83,5 +64,20 @@
 
 {{#if kidsplayer}}
 	<script src="/javascripts/kids-vidpage.js"></script>
-{{/if}}</body>
+{{/if}}
+<script>
+	      Vue.use(SocialSharing);
+	      new Vue({
+	        el: '#socialMedia',
+	        data: {
+	          overriddenNetworks: {
+	            "test": {
+	              "sharer": "https://google.com",
+	              "type": "popup"
+	            },
+	          }
+	        }
+	      });
+	    </script>
+</body>
 </html>

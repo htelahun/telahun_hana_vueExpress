@@ -47,6 +47,44 @@
     <input class="submit" type="submit" value="Submit your review" v-on:click="addReview">
   </aside>
 
+</section>
+</section>
 
-</section>
-</section>
+<div id="socialMedia">
+      <social-sharing url="{{window.location.href}}"
+                      title="The Progressive JavaScript Framework"
+                      description="Intuitive, Fast and Composable MVVM for building interactive interfaces."
+                      quote="Vue is a progressive framework for building user interfaces."
+                      hashtags="vuejs,javascript,framework"
+                      twitter-user="vuejs"
+                      :networks="overriddenNetworks"
+                      v-cloak inline-template>
+        <div class="social-icon">
+          <ul>
+
+            <li>
+              <network network="facebook" id="facebook">
+                <i class="fab fa-facebook-square"></i>
+              </network>
+            </li>
+            <li>
+              <network network="googleplus" id="googleplus">
+                <i class="fab fa-google-plus-square"></i>
+              </network>
+            </li>
+
+            <li>
+              <network network="pinterest" id="pinterest">
+                <i class="fab fa-fw fa-pinterest"></i>
+              </network>
+            </li>
+            <li>
+              <network network="twitter" id="twitter">
+                <i class="fab fa-twitter-square"></i>
+              </network>
+            </li>
+
+          </ul>
+        </div>
+      </social-sharing>
+    </div>

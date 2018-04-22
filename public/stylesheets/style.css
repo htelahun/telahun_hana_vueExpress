@@ -226,6 +226,8 @@ z-index: -1;
   border: solid 2px rgba(255, 255, 255, 0.3);
   overflow-y: scroll;
 }
+
+
 .sent{
   margin-bottom: 20px;
 }
@@ -239,4 +241,18 @@ z-index: -1;
 .x:hover{
   cursor: pointer;
   transform: scale(1.1);
+}
+#socialMedia{
+	margin-top: 10vh;
+	margin-right: 30px;
+}
+
+.social-icon{
+	z-index: 6;
+
+
+}
+.social-icon ul li{
+	font-size: 2em;
+	color: rgba(255, 255, 255, 0.3);
 }
